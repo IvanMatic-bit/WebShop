@@ -1,0 +1,261 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+body, * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+
+#sve{
+   height: 100%;
+   width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+#IzbornikDugme{
+    display: none;
+}
+#lijevo{
+height: 50%;
+width: 100%;
+
+
+display: flex;
+color: white;
+flex-direction: row;
+
+}
+
+#divForme{
+    width: calc(50% - 5px);
+    height: 100%;
+   
+    background-color: rgb(27, 64, 235);
+    overflow-y: scroll;
+    
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#divTabele{
+    width: 50%;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: rgb(186, 37, 216);
+   
+
+}
+
+#desno{
+    height: 50%;
+    width: 100%;
+    
+}
+
+#desnoGore{
+    height: 90%;
+    width: 100%;
+    background:  url("cpu-images@2x.jpg");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center; 
+   
+    overflow: hidden;
+    color: crimson;
+}
+#desnoDole{
+    height: 10%;
+    width: 100%;
+}
+
+input{
+    width: 100%;
+   margin-bottom: 10px;
+}
+input[type="submit"] {
+    cursor:pointer;
+    height: 100px;
+    font-size: 120%;
+}
+
+
+#nav1{
+    height: 100%;
+    width: 10%;
+    background-color: white;
+    text-align: left;
+    transition: 0.5s;
+    background-color: rgba(27, 64, 235, .5);
+    color: transparent;
+    float: left;
+    z-index: 1;
+}
+#nav1:hover{
+    width: 30%;
+    transition: 0.5s;
+    color: white;
+   
+    
+}
+
+#nav2{
+    height: 100%;
+    width: 10%;
+    float: right;
+    transition: 0.5s;
+    background-color: rgba(186, 37, 216, .5);
+    color: transparent;
+    z-index: 1;
+}
+#nav2:hover{
+    width: 30%;
+    transition: 0.5s;
+    color: white;
+}
+
+#nav3{
+    height: 100%;
+    width: 10%;
+    background-color: white;
+    text-align: left;
+    transition: 0.5s;
+    background-color: rgba(27, 64, 235, .5);
+    color: transparent;
+    float: left;
+    z-index: 1;
+}
+#nav3:hover{
+    width: 30%;
+    transition: 0.5s;
+    color: white;
+   
+    
+}
+
+.navDonji{
+    width: calc(100%/3 - 5px);
+   
+    height: 50px;
+    margin-right: 5px;
+    background-color: #369BD5;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    z-index: 9 !important;
+    
+}
+
+.dijetenavDonji
+{
+    background-color: #369BD5;
+    overflow: hidden;
+    transition: 0.5s;
+    height: 0px;
+    position: relative;
+    text-align:initial; 
+    z-index: 9 !important;
+    width: 100%;
+}
+
+#navJS{
+    height: 100%;
+    width: 10%;
+    float: left;
+    transition: 0.5s;
+    background-color: rgba(186, 37, 216, .5);
+    color: transparent;
+    z-index: 1;
+}
+
+
+#tabelaProizvoda{
+    border: 3px solid;
+    font: 150%;
+    width: 100%;
+    word-break: break-all;
+    text-align: center;
+}
+td{
+    border: 1px solid;
+}
+.dodajProizvod{
+    width: 100%;
+    height: 100%;
+}
+input[type="select"]{
+    width: 100%;
+}
+.IzbornikStavka {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px white solid;
+    text-align: center;
+}
+
+@media only  screen and (max-width: 600px)
+{
+    .navDonji{
+        background-color: #369BD5;
+    }
+    #desnoGore{
+        height: 20%;
+
+    }
+    .navDonji{
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid black;
+        overflow: visible;
+       
+    }
+    #lijevo{
+        flex-direction: column;
+        height: 70%;
+        margin: 0;
+        width: 100%;
+
+    }
+    #divForme{
+        width: 100%;
+        height: auto;
+       overflow-y: visible;
+    }
+    #divTabele{
+        width: 100%;
+        overflow-y: visible;
+    }
+   #desnoDole{
+       height: auto;
+   }
+   #desno{
+    height: 30%;
+    width: 100%;
+    margin: 0;
+   }
+   #sve{
+    flex-direction: column-reverse;
+    position: initial;
+    
+    
+    
+
+   }
+   #IzbornikDugme{
+       display: inline;
+   }
+   .dijetenavDonji{
+       position: relative;
+   }
+   table{
+    word-break: break-all;
+    font-size: 80%;
+   }
+   
+}

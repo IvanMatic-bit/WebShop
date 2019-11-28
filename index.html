@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stilovi.css">
+    <script src="./jquery/jquery.js"></script>
+    <script src=".\jquery-validation-1.16.0\dist/jquery.validate.js"></script>
+    <title>Ivan Matić</title>
+</head>
+
+<body>
+    <div id="sve">
+
+        <div id="lijevo">
+
+            <div id="divForme">
+                <form id="forma">
+                    <label for="dostavaIme">Ime</label><br>
+                    <input id="dostavaIme" name="dostavaIme" placeholder="kupac ime"><br>
+                    Proizvod<br>
+                    <select  id="ProizvodID" name="ProizvodID" placeholder="Proizvod" value=""><br>
+                    <label for="dostavaAdresa">Adresa</label><br>
+                    <input id="dostavaAdresa" name="dostavaAdresa" placeholder="kupac adresa"><br>
+
+                    <label for="dostavaPostanskiBroj">Poštanski broj</label><br>
+                    <input id="dostavaPostanskiBroj" name="dostavaPostanskiBroj" value=""><br>
+
+                    <label for="dostavaTelefon">Telefon</label><br>
+                    <input id="dostavaTelefon" name="dostavaTelefon" placeholder="+387-61-888-8888"><br>
+
+                    <label for="napomena" >Napomena</label><br>
+                    <textarea id="napomena" name="napomena" style="width: 100%"></textarea><br>
+                    <br><br>
+                    Grad
+                    <input id="gradDostava" name="gradDostava" value="" placeholder="Grad dostave"><br>
+                    <input type="button" id="dodaj" value="Dodaj kupca" onclick="Submit()">
+                </form>
+                <table id="tabelaProizvoda">
+                    <thead>
+                        <td>ProizvodID</td>
+                        <td>Naziv proizvoda</td>
+                        <td>Cijena</td>
+                        <td>Jedinica mjere</td>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="divTabele">
+                <table style="table-layout: fixed;">
+                    <thead style="text-align: center; font-size: 150%; ">
+                        <td>ProizvodID</td>
+                        <td>Naziv</td>
+                        <td>Cijena</td>
+                        <td>Kolicina</td>
+                        <td>Iznos</td>
+                        <td>Jedinica mjere</td>
+                        <td>opcijaModel</td>
+                    </thead>
+                    </thead>
+                        <tbody id="narudzbe"></tbody>
+                </table>
+               
+
+
+            </div>
+        </div>
+        <div id="desno">
+                <div class="navDonji">
+                        <a id="IzbornikDugme">☰</a><span>Colapsible Group 1</span> 
+                        <div class="dijetenavDonji">
+                                <a class="IzbornikStavka" href="https://www.google.ba" target="_blank">Google</a> 
+                                <a class="IzbornikStavka" href="https://www.youtube.com" target="_blank">Youtube</a> 
+                                <a class="IzbornikStavka" href="https://www.reddit.com"target="_blank" >reddit</a> 
+                                
+                        </div>
+                    </div>
+                    <div class="navDonji">
+                            <a id="IzbornikDugme">☰</a><span>Colapsible Group 2</span>
+                        <div class="dijetenavDonji" style="text-align:center;">
+                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor
+    
+    
+                        </div>
+                    </div>
+                    <div class="navDonji">
+                            <a id="IzbornikDugme">☰</a><span>Colapsible Group 3</span> 
+                            <div class="dijetenavDonji">
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                dolor sit amet, consetetur sadipscing elitr
+        
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                dolor sit amet, consetetur sadipscing elitr
+        
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                dolor sit amet, consetetur sadipscing elitr
+                            </div>
+                        </div>
+            <div id="desnoGore">
+                <div id="nav1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet.</div>
+                <div id="navJS">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet.</div>
+                    <div id="nav3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                            sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+                            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                            sit amet.</div>
+                <div id="nav2">
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                    dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                    praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
+                    amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat.
+                </div>
+                
+                
+                
+            </div>
+            <div id="desnoDole">
+               
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="skripta.js"></script>
+
+</html>
